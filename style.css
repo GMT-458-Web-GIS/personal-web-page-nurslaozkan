@@ -218,12 +218,10 @@ section h2 {
     margin-bottom: 0.5rem;
 }
 
-/* BÖLÜM 5: WORKING AREAS (YENİ KARTLI TASARIM) */
 .area-grid {
     display: grid;
-    /* Ekrana sığdığı kadar kart sığdır, her kart en az 300px olsun */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem; /* Kartlar arası boşluk */
+    gap: 1.5rem;
 }
 
 .area-card {
@@ -231,23 +229,23 @@ section h2 {
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 1.5rem;
-    display: flex; /* İkon ve yazıyı yanyana hizalamak için */
-    align-items: center; /* Dikeyde ortala */
-    gap: 1rem; /* İkon ve yazı arası boşluk */
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .area-card:hover {
-    transform: translateY(-5px); /* Havalanma efekti */
+    transform: translateY(-5px); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    border-color: var(--accent-color); /* Vurgu rengi kenarlık */
+    border-color: var(--accent-color); 
 }
 
 .area-card img {
-    height: 80px; /* Logo yüksekliği */
-    width: 80px;  /* Logo genişliği */
-    object-fit: contain; /* Logonun orantısını bozma */
-    flex-shrink: 0; /* Küçülmesini engelle */
+    height: 80px; 
+    width: 80px;  
+    object-fit: contain; 
+    flex-shrink: 0; 
 }
 
 .area-card p {
