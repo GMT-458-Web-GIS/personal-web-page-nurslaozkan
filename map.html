@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Work Map - Nur Sıla Özkan</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@v9.1.0/ol.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+
+        .map-page-section {
+            display: flex;
+            flex-direction: column;
+            padding: 4rem 5%;
+            height: auto;
+            min-height: 100vh;
+        }
+
+        .map-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .map-header h2 {
+            font-size: 2.5rem; 
+            color: var(--accent-color);
+        }
+
+        .map-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 800px;
+            margin: 0.5rem auto 0;
+        }
+
+        .map-controls {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .map-controls button {
+            padding: 0.6rem 1.2rem;
+            border-radius: 5px;
+            border: 1px solid var(--border-color);
+            background-color: var(--bg-light);
+            color: var(--text-secondary);
+            font-family: var(--font-main);
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .map-controls button:hover {
+            background-color: #3e5067; 
+        }
+
+        .map-controls button.active {
+            background-color: var(--accent-color);
+            color: var(--bg-dark);
+            font-weight: 600;
+            border-color: var(--accent-color);
+        }
+
+        #map-container {
+            width: 100%;
+            height: 70vh; 
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            position: relative; 
+        }
+        #map {
+            width: 100%;
+            height: 100%;
+        }
+
+        .ol-popup {
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #cccccc;
+            bottom: 12px;
+            left: -50px;
+            min-width: 280px;
+            color: #333;
+        }
+        .ol-popup:after, .ol-popup:before {
+            top: 100%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+        }
+        .ol-popup:after {
+            border-top-color: white;
+            border-width: 10px;
+            left: 48px;
+            margin-left: -10px;
+        }
+        .ol-popup:before {
+            border-top-color: #cccccc;
+            border-width: 11px;
+            left: 48px;
+            margin-left: -11px;
+        }
+        .ol-popup-closer {
+            text-decoration: none;
+            position: absolute;
+            top: 2px;
+            right: 8px;
+            color: #555;
+            font-size: 1.2rem;
+        }
+        .ol-popup-closer:after {
+            content: "✖";
+        }
+        #popup-content h4 {
+            margin: 0 0 5px 0;
+            color: var(--bg-dark);
+        }
+        #popup-content img {
+            width: 100%;
+            height: 150px; 
+            object-fit: cover; 
+            border-radius: 4px;
+            margin-bottom: 5px;
+        }
+        #popup-content p {
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-content">
+
+        <section class="map-page-section">
+            <div class="map-header">
+                <h2>Work Travel & Project Map</h2>
+                <p>This interactive map shows the locations of transformer centers I visited and conducted drone flights for during my work trips across Türkiye.</p>
+            </div>
+
+            <div class="map-controls">
+                <button id="street-view-btn" class="active">Street Map</button>
+                <button id="satellite-view-btn">Satellite</button>
+            </div>
+            <div id="map-container">
+                <div id="map"></div>
+
+                <div id="popup" class="ol-popup">
+                    <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+                    <div id="popup-content"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <h3>Nur Sıla Özkan</h3>
+            <h6>Geomatics Engineer</h6>
+        </div>
+        <ul>
+            <li><a href="index.html">Home🏠</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="academic.html">Academic Background</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="working_areas.html">Working Areas</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="map.html">Work Map</a></li>
+        </ul>
+        <div class="sidebar-footer" id="contact">
+            <h4>Contact</h4>
+            <div class="contact-links">
+                <a href="mailto:na.nu.slaozk@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/nursilaozkan" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/nursla" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="https://cdn.jsdelivr.net/npm/ol@v9.1.0/dist/ol.js"></script>
+    <script src="map.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
