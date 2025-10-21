@@ -421,9 +421,45 @@ section h2::after {
 }
 
 
+/* --- Mobile Menu Toggle Button --- */
+.menu-toggle {
+    display: none; /* Masaüstünde gizli */
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1001; /* Sidebar'ın önünde olsun */
+    background: var(--bg-light);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.menu-toggle:hover {
+    background: var(--accent-color);
+    color: var(--bg-dark);
+}
 
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block; /* Mobilde göster */
+    }
 
+    .sidebar {
+        right: -100%; /* Başlangıçta gizli (senin kodun) */
+        /* right: -var(--sidebar-width); // Bu daha doğru olabilir */
+        transition: right 0.3s ease-in-out;
+    }
 
+    .sidebar.active {
+        right: 0; /* JS ile active class'ı gelince kayarak açıl */
+    }
 
-
+    .main-content {
+        margin-right: 0; /* (senin kodun) */
+    }
+}
