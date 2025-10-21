@@ -6,7 +6,7 @@ This repo contains the source code for Geomatics Engineer Nur Sıla Özkan's per
 🚀 Live Demo
 
 You can view the live version of the portfolio website here:
-**[https://gmt-458-web-gjs.github.io/personal-web-page-nurslaozkan/](https://gmt-458-web-gjs.github.io/personal-web-page-nurslaozkan/)**
+**[https://gmt-458-web-gis.github.io/personal-web-page-nurslaozkan/](https://gmt-458-web-gis.github.io/personal-web-page-nurslaozkan/)**
 
 
 🛠️ **Technologies Used**
@@ -40,7 +40,7 @@ AI Solution and Learning: The AI ​​proposed a three-step approach to address
 This project is a static website. To run the files on your local machine:
 
 1. Clone the repo:
-**[https://gmt-458-web-gjs.github.io/personal-web-page-nurslaozkan/](https://gmt-458-web-gjs.github.io/personal-web-page-nurslaozkan/)**
+**[https://gmt-458-web-gis.github.io/personal-web-page-nurslaozkan/](https://gmt-458-web-gis.github.io/personal-web-page-nurslaozkan/)**
 
 2. Open the index.html file directly in your web browser.
 (For a better development experience, it's recommended to use a simple local server like the VS Code plugin [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).)
