@@ -417,7 +417,9 @@ section h2::after {
     .about-container {
         flex-direction: column;
     }
-    .project-grid 
+    .project-grid{
+        grid-template-columns: 1fr;
+    } 
     .experience-grid{
         grid-template-columns: 1fr;
     }
