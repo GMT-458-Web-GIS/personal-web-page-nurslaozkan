@@ -420,9 +420,6 @@ section h2::after {
     .project-grid{
         grid-template-columns: 1fr;
     } 
-    .experience-grid{
-        grid-template-columns: 1fr;
-    }
 }
 
 
