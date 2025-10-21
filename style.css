@@ -133,8 +133,7 @@ section h2::after {
     content: '';
     position: absolute;
     display: block;
-    width: 100%; 
-    max-width: 600px; 
+    width: 800px; 
     height: 4px; 
     background: var(--accent-color); 
     bottom: 0;
@@ -417,9 +416,9 @@ section h2::after {
     .about-container {
         flex-direction: column;
     }
-    .project-grid{
+    .project-grid {
         grid-template-columns: 1fr;
-    } 
+    }
 }
 
 
