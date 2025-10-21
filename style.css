@@ -132,7 +132,8 @@ section h2::after {
     content: '';
     position: absolute;
     display: block;
-    width: 800px; 
+    width: 100%; 
+    max-width: 800px; 
     height: 4px; 
     background: var(--accent-color); 
     bottom: 0;
@@ -421,13 +422,12 @@ section h2::after {
 }
 
 
-/* --- Mobile Menu Toggle Button --- */
 .menu-toggle {
-    display: none; /* Masaüstünde gizli */
+    display: none; 
     position: fixed;
     top: 25px;
     right: 25px;
-    z-index: 1001; /* Sidebar'ın önünde olsun */
+    z-index: 1001; 
     background: var(--bg-light);
     color: var(--text-primary);
     border: 1px solid var(--border-color);
@@ -446,20 +446,19 @@ section h2::after {
 
 @media (max-width: 992px) {
     .menu-toggle {
-        display: block; /* Mobilde göster */
+        display: block; 
     }
 
     .sidebar {
-        right: -100%; /* Başlangıçta gizli (senin kodun) */
-        /* right: -var(--sidebar-width); // Bu daha doğru olabilir */
+        right: -100%; 
         transition: right 0.3s ease-in-out;
     }
 
     .sidebar.active {
-        right: 0; /* JS ile active class'ı gelince kayarak açıl */
+        right: 0; 
     }
 
     .main-content {
-        margin-right: 0; /* (senin kodun) */
+        margin-right: 0; 
     }
 }
