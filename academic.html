@@ -5,10 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academic Background - Nur Sıla Özkan</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+  (function() {
+    try {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {
+      console.warn('Could not apply saved theme.', e);
+    }
+  })();
+</script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <button id="theme-toggle-btn" class="theme-switcher" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+</button>
 
 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
     <i class="fas fa-bars"></i>
@@ -46,22 +63,22 @@
                     <a href="https://maps.app.goo.gl/ZuvXem5AR5fGRpM3A" target="_blank" class="stretched-link"></a>
                     <h3>Hacettepe University</h3>
                     <p><strong>Geomatics Engineering (ENG.)</strong></p>
-                    <p>Bachelor's Degree | September 2021 - Present</p>
-                    <small>(Enterprise and Investment Community Board Member - Chamber of Surveying and Cadastre Engineers Member)</small>
+                    <small>Bachelor's Degree | September 2021 - Present</small>
+                    <p>(Enterprise and Investment Community Board Member - Chamber of Surveying and Cadastre Engineers Member)</p>
                 </div>
 
                 <div class="card">
                     <a href="https://maps.app.goo.gl/gPghg9B4SaNDQbQt9" target="_blank" class="stretched-link"></a>
                     <h3>Anadolu University</h3>
                     <p><strong>Open Education Business Administration (ENG.)</strong></p>
-                    <p>Bachelor's Degree | September 2022 - Present</p>
+                    <small>Bachelor's Degree | September 2022 - Present</small>
                 </div>
 
                 <div class="card">
                     <a href="https://maps.app.goo.gl/W43KKhLr7wSe3WLJ9" target="_blank" class="stretched-link"></a>
                     <h3>TOBB Science High School</h3>
                     <p><strong>HIGH SCHOOL</strong></p>
-                    <p>September 2017 - September 2021</p>
+                    <small>September 2017 - September 2021</small>
                 </div>
             </div>
         </section>

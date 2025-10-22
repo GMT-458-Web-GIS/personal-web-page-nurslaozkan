@@ -5,10 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me - Nur Sıla Özkan</title>
     <link rel="stylesheet" href="style.css">
+<script>
+  (function() {
+    try {
+      var theme = localStorage.getItem('theme');
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    } catch (e) {
+      console.warn('Could not apply saved theme.', e);
+    }
+  })();
+</script>
+
+</head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <button id="theme-toggle-btn" class="theme-switcher" aria-label="Toggle theme">
+    <i class="fas fa-moon"></i>
+</button>
 
 <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
     <i class="fas fa-bars"></i>
