@@ -49,6 +49,7 @@ This portfolio was created as a professional digital identity — a modern alter
 
 
 ---
+**Author:** Nur Sıla ÖZKAN
 
 📬 **Contact**
 
